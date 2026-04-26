@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlknur 💖</title>
+
+<style>
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Arka plan video */
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Yazı alanı */
+.content {
+    position: relative;
+    top: 20%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    color: pink;
+}
+
+p {
+    font-size: 22px;
+}
+
+/* Kalp animasyonu */
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float 4s linear infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(0) scale(1);}
+    100% {transform: translateY(-800px) scale(2);}
+}
+
+/* Not kutuları */
+.note {
+    background: rgba(255, 0, 100, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 70%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ARKA PLAN VİDEO -->
+<video autoplay muted loop>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+    <h1>💖 Seni Çok Seviyorum İlknur 💖</h1>
+
+    <p>
+        İlknur seni ilk gördüğüm andan itibaren çok seviyorum... <br>
+        Senin kusur saydığın şeylere ben sırılsıklam aşığım bebeğim 💕
+    </p>
+
+    <!-- Aşk notları -->
+    <div class="note">Gözlerin en güzel şiirden daha anlamlı 🌹</div>
+    <div class="note">Sen gülünce dünya duruyor gibi hissediyorum 💖</div>
+    <div class="note">Kalbim sadece senin adını biliyor ❤️</div>
+    <div class="note">Sen benim en güzel hikayemsin ✨</div>
+</div>
+
+<script>
+// Tıklayınca kalp oluşturma
+document.addEventListener("click", function(e) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+});
+</script>
+
+</body>
+</html>
