@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlknur</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Cormorant Garamond',serif;background:#24000d;color:#fff;overflow-x:hidden}section{min-height:100vh;padding:40px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative}.hero{background:linear-gradient(rgba(60,0,20,.55),rgba(20,0,10,.85)),url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80') center/cover}.small{font-family:'Great Vibes',cursive;font-size:28px;color:#ffb3c7}.title{font-size:78px;font-weight:700}.sub{max-width:700px;text-align:center;font-size:28px;color:#ffd8e3;margin:18px 0}.btn{padding:14px 28px;border-radius:30px;border:none;background:linear-gradient(45deg,#ff2d75,#ff5ca8);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 0 20px rgba(255,80,140,.45)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;width:100%;max-width:1100px}.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:24px;border-radius:20px}.card h3{font-size:36px}.card p{font-size:24px;color:#f3c6d4}.letter{max-width:800px;background:#fff;color:#5a1430;padding:35px;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.25)}.letter h2{font-family:'Great Vibes',cursive;font-size:44px}.letter p{font-size:28px;line-height:1.5;margin:14px 0}.promise{font-size:56px;text-align:center}.footer{padding:40px;text-align:center;color:#d49}.heart{position:fixed;color:#ff4f92;animation:fall 8s linear infinite;opacity:.8}.music{position:fixed;right:16px;bottom:16px;background:#1118;border:1px solid #fff2;padding:12px 16px;border-radius:22px;cursor:pointer}@keyframes fall{0%{transform:translateY(-10vh)}100%{transform:translateY(110vh)}}html{scroll-behavior:smooth}@media(max-width:768px){.title{font-size:58px}.sub,.letter p{font-size:22px}.promise{font-size:42px}}
+</style>
+</head>
+<body>
+<section class='hero'>
+<div class='small'>sevgili</div>
+<div class='title'>İlknur</div>
+<div class='sub'>seni çok seviyorum — her sabahın, her gece yarısının ve aramızdaki tüm sessiz anların.</div>
+<button class='btn' onclick="document.getElementById('mektup').scrollIntoView()">Mektubu Aç</button>
+</section>
+<section id='mektup'>
+<div class='small'>el yazısı bir mektup</div>
+<div class='letter'>
+<h2>Sevgili İlknur,</h2>
+<p>Seni ilk gördüğüm an içimde kelebekler uçuştu. O telaş, o sıcaklık, tarif etmesi zor ama unutması imkânsızdı.</p>
+<p>Senin kusur sandığın şeylere ben hayran kaldım. Çünkü seni sen yapan her detay, kalbimde ayrı bir yere sahip.</p>
+<p>Bu sayfa sana bir şey anlatmak için yazıldı: Seni seviyorum.</p>
+<p><b>Sonsuza dek seninim.</b></p>
+</div>
+</section>
+<section>
+<div class='small'>altı küçük sebep</div>
+<div class='cards'>
+<div class='card'><h3>Gözlerin</h3><p>Bakınca zaman yavaşlıyor.</p></div>
+<div class='card'><h3>Gülüşün</h3><p>En karanlık günü bile aydınlatıyor.</p></div>
+<div class='card'><h3>Sesin</h3><p>İçimi huzurla dolduruyor.</p></div>
+<div class='card'><h3>Varlığın</h3><p>Yanımda olunca dünya daha güzel.</p></div>
+<div class='card'><h3>Kahkahan</h3><p>Duymaya doyamıyorum.</p></div>
+<div class='card'><h3>Yarınların</h3><p>Hepsinde seni görmek istiyorum.</p></div>
+</div>
+</section>
+<section>
+<div style='font-size:70px'>❤</div>
+<div class='promise'>Sana bir söz veriyorum</div>
+<div class='sub'>Her gün yeniden, ilk günkü heyecanla sana seni çok seviyorum diyeceğim.</div>
+<div class='small'>sonsuzca dek — seninim</div>
+</section>
+<div class='footer'>İlknur'a • 2026</div>
+<button class='music' onclick='toggleMusic()'>♪ Şarkımızı Çal</button>
+<audio id='audio' loop src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'></audio>
+<script>
+for(let i=0;i<22;i++){let h=document.createElement('div');h.className='heart';h.innerHTML='❤';h.style.left=Math.random()*100+'vw';h.style.animationDelay=(Math.random()*8)+'s';h.style.fontSize=(12+Math.random()*18)+'px';document.body.appendChild(h)}
+function toggleMusic(){const a=document.getElementById('audio'); if(a.paused)a.play(); else a.pause();}
+</script>
+</body></html>
